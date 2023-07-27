@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("C:/KAMAL SIR/js/projects/p1_digiclk/40e164097d39f41c58af09250127cf81.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.clock {
+  display: flex;
+}
+
+.clock div {
+  margin: 5px;
+  position: relative;
+}
+
+.clock span {
+  width: 100px;
+  height: 80px;
+  background: rgb(213, 62, 221);
+  opacity: 0.8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clock .text {
+  height: 30px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: rgb(92, 5, 97);
+  opacity: 0.8;
+}
+
+.clock #ampm {
+  bottom: 0;
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background: rgb(51, 11, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .clock {
+    flex-direction: column;
+  }
+
+  .clock div {
+    margin: 10px;
+  }
+
+  .clock span {
+    font-size: 40px;
+    width: 150px;
+    height: 120px;
+  }
+
+  .clock #ampm {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    margin: -45px 33px;
+  }
+}
+
+nav {
+  background-color: #C3B6EF;
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+a:hover {
+  background-color: #C3B6EF;
+  border-radius: 5px;
+}
+
+
+
+
+/* for alarm */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input {
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+

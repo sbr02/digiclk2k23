@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alarm Clock</title>
+</head>
+<body>
+
+  <div id="nav">
+   <nav>
+    <ul>
+     <li><a href="index.html">Digital Clock</a></li>
+     <li><a href="alarm.html">Alarm</a></li>
+    </ul>
+   </nav>
+  </div>
+
+  <h1>Alarm Clock</h1>
+  <label for="alarmTime">Set Alarm Time:</label>
+  <input type="time" id="alarmTime">
+  <button onclick="setAlarm()">Set Alarm</button>
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    function setAlarm() {
+      const alarmTimeInput = document.getElementById("alarmTime");
+      const alarmTime = alarmTimeInput.value;
+
+      if (!alarmTime) {
+        alert("Please enter a valid alarm time.");
+        return;
+      }
+
+      const [alarmHour, alarmMinute] = alarmTime.split(":");
+      const now = new Date();
+      const alarm = new Date(now.getFullYear(), now.getMonth(), now.getDate(), alarmHour, alarmMinute);
+
+      const currentTime = new Date();
+      const timeToAlarm = alarm - currentTime;
+
+      if (timeToAlarm < 0) {
+        alert("The alarm time should be set for a future time.");
+        return;
+      }
+
+      setTimeout(() => {
+        alert("Wake up! It's time!");
+      }, timeToAlarm);
+    }
+  </script>
+</body>
+</html>
